@@ -47,8 +47,7 @@ export const portfolioData: PortfolioData = {
     email: "sulaimaneksambi@gmail.com",
     socials: [
       { platform: "GitHub", url: "https://github.com/sulaimanxmb", icon: "Github" },
-      { platform: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
-      { platform: "Twitter", url: "https://www.linkedin.com/in/mohammed-sulaiman-eksambi/", icon: "Twitter" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/mohammed-sulaiman-eksambi/", icon: "Linkedin" },
     ],
   },
   skills: [
