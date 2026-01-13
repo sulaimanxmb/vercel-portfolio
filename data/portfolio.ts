@@ -43,7 +43,7 @@ export const portfolioData: PortfolioData = {
     role: "DevOps and Cybersecurity Aspirant",
     tagline: "",
     about:
-      "I am a passionate learner and aspiring professional in the fields of cloud Management and cybersecurity.",
+      "I am a passionate learner and aspiring professional in the fields of Cloud Management and cybersecurity.",
     email: "sulaimaneksambi@gmail.com",
     socials: [
       { platform: "GitHub", url: "https://github.com/sulaimanxmb", icon: "Github" },
@@ -59,6 +59,8 @@ export const portfolioData: PortfolioData = {
     "Docker",
     "Git",
     "CI/CD",
+    "Ai-assisted Development",
+    "Cloud Management",
     "Bug Bounty",
     "Penetration Testing",
   ],
