@@ -121,9 +121,9 @@ export const portfolioData: PortfolioData = {
   certifications: [
     {
       id: 1,
-      title: "Google Certification",
+      title: "Google Cybersecurity Profesional Certification",
       issuer: "Google",
-      issueDate: "January 2026",
+      issueDate: "February 2026",
       expirationDate: "Does not expire",
       credentialId: "GC-2026-001",
       pdfUrl: "/google-certification.pdf",
