@@ -23,6 +23,18 @@ export interface Project {
   repoUrl?: string;
 }
 
+export interface Certification {
+  id: number;
+  title: string;
+  issuer: string;
+  issueDate: string;
+  expirationDate?: string;
+  credentialId?: string;
+  pdfUrl: string;
+  credentialUrl?: string;
+  skills?: string[];
+}
+
 export interface PortfolioData {
   personalInfo: {
     name: string;
@@ -35,6 +47,7 @@ export interface PortfolioData {
   skills: string[];
   experiences: Experience[];
   projects: Project[];
+  certifications: Certification[];
 }
 
 export const portfolioData: PortfolioData = {
@@ -62,7 +75,7 @@ export const portfolioData: PortfolioData = {
     "Ai-assisted Development",
     "Cloud Management",
     "Bug Bounty",
-    "Penetration Testing",
+    "OWASP Top 10",
   ],
   experiences: [
     {
@@ -103,6 +116,18 @@ export const portfolioData: PortfolioData = {
       imageUrl: "/honeypot.png",
       technologies: ["Docker", "Cybersecurity", "Log parsing"],
       repoUrl: "https://github.com/sulaimanxmb/HoneyPot",
+    },
+  ],
+  certifications: [
+    {
+      id: 1,
+      title: "Google Certification",
+      issuer: "Google",
+      issueDate: "January 2026",
+      expirationDate: "Does not expire",
+      credentialId: "GC-2026-001",
+      pdfUrl: "/google-certification.pdf",
+      skills: ["Cloud", "Networking", "Security"],
     },
   ],
 };
