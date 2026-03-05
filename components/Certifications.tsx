@@ -1,18 +1,19 @@
 import Section from './Section';
 import { portfolioData } from '@/data/portfolio';
+import Image from 'next/image';
 
-function IssuerBadge({ issuer }: { issuer: string }) {
-  if (/google/i.test(issuer)) {
+function IssuerBadge({ issuer, logoUrl }: { issuer: string; logoUrl?: string }) {
+  if (logoUrl) {
     return (
-      <div className="h-12 w-12 rounded-xl bg-white border border-gray-300 flex items-center justify-center shrink-0">
-        <span className="text-[10px] font-bold leading-none tracking-tight select-none">
-          <span className="text-[#4285F4]">G</span>
-          <span className="text-[#EA4335]">o</span>
-          <span className="text-[#FBBC05]">o</span>
-          <span className="text-[#4285F4]">g</span>
-          <span className="text-[#34A853]">l</span>
-          <span className="text-[#EA4335]">e</span>
-        </span>
+      <div className="h-12 w-12 rounded-xl bg-white border border-gray-300 flex items-center justify-center shrink-0 p-1 overflow-hidden">
+        <Image
+          src={logoUrl}
+          alt={`${issuer} logo`}
+          className="h-full w-full object-contain"
+          width={48}
+          height={48}
+          loading="lazy"
+        />
       </div>
     );
   }
@@ -38,7 +39,7 @@ export default function Certifications() {
           >
             <div className="p-5 sm:p-6 border-b border-gray-700/60">
               <div className="flex items-start gap-4">
-                <IssuerBadge issuer={cert.issuer} />
+                <IssuerBadge issuer={cert.issuer} logoUrl={cert.logoUrl} />
                 <div className="min-w-0">
                   <p className="text-xs uppercase tracking-[0.18em] text-gray-400 mb-1">License & Certification</p>
                   <h3 className="text-xl font-semibold text-gray-100 leading-snug">{cert.title}</h3>

@@ -27,6 +27,7 @@ export interface Certification {
   id: number;
   title: string;
   issuer: string;
+  logoUrl?: string;
   issueDate: string;
   expirationDate?: string;
   credentialId?: string;
@@ -123,6 +124,7 @@ export const portfolioData: PortfolioData = {
       id: 1,
       title: "Google Cybersecurity Profesional Certification",
       issuer: "Google",
+      logoUrl: "/google-logo.png",
       issueDate: "February 2026",
       expirationDate: "Does not expire",
       credentialId: "GC-2026-001",
